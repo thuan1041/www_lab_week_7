@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee List</title>
+</head>
+<body>
+
+<h2>Employee List</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Date of Birth</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.getId()}"></td>
+        <td th:text="${employee.getFullname()}"></td>
+        <td th:text="${employee.getDob()}"></td>
+        <td th:text="${employee.getEmail()}"></td>
+        <td th:text="${employee.getPhone()}"></td>
+        <td th:text="${employee.getAddress()}"></td>
+        <td th:text="${employee.getStatus()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

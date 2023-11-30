@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product List</title>
+</head>
+<body>
+
+<h2>Product List</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Unit</th>
+        <th>Manufacturer</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.getProduct_id()}"></td>
+        <td th:text="${product.getName()}"></td>
+        <td th:text="${product.getDescription()}"></td>
+        <td th:text="${product.getUnit()}"></td>
+        <td th:text="${product.getManufacturer()}"></td>
+        <td th:text="${product.getStatus()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
